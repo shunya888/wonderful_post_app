@@ -12,15 +12,15 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.title %></td>
         <td><%= article.content %></td>
-          <%= link_to '詳細', article, class: "btn btn-success mr-1" %></td>
-          <%= link_to '編集', edit_article_path(article), class: "btn btn-warning" %></td>
-          <%= button_to "削除", article, class: "btn btn-danger", method: :delete %></td>
+        <td class="hstack gap-3">
+          <%= link_to '詳細', article, class: "btn btn-success mr-1" %>
+          <%= link_to '編集', edit_article_path(article), class: "btn btn-warning" %>
+          <%= button_to "削除", article, class: "btn btn-danger", method: :delete %>
         </td>
       </tr>
     <% end %>
