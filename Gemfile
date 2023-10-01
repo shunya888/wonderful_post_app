@@ -37,6 +37,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-doc'
   gem "net-http"
+  gem 'devise-i18n'
 end
 
 group :development do
