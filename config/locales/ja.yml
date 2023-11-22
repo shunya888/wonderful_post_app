@@ -5,7 +5,6 @@ ja:
     # ↓model名(つまりテーブル名)を宣言
     models:
       article: 記事
-
     # ↓modelのattribute名(つまりテーブル名のカラム名)を宣言
     attributes:
       article:
