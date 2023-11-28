@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+tags = %w(タグ1 タグ2)
+tags.each { |tag| Tag.find_or_create_by!(name: tag) }
 
 3.times do |n|
   n += 1
@@ -16,6 +18,7 @@
     i += 1
     user.articles.find_or_create_by!(title: "No.#{i}: user00#{n}の記事") do |article|
       article.content = "No.#{i}: user00#{n}の記事の本文"
+      article.tag_ids = Tag.all.pluck(:id)
     end
   end
 end
